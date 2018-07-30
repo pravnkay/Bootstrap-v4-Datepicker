@@ -4,6 +4,7 @@
   
 
 A fork of the repo here : [Bootstrap-Datepicker](https://github.com/uxsolutions/bootstrap-datepicker)
+With changes to suit Bootstrap v4 styles.
 
   <hr>
 
