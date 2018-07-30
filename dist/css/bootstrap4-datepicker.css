@@ -1,0 +1,650 @@
+/*!
+ * Datepicker for Bootstrap v1.8.0 (https://github.com/uxsolutions/bootstrap-datepicker)
+ *
+ * Style updated for Bootstrap v4 (https://github.com/pravnkay/Bootstrap-v4-Datepicker)
+ *
+ * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ */
+
+
+
+.datepicker.datepicker-dropdown.dropdown-menu {
+	/* margin-top: 2.125em; */
+}
+
+.datepicker {
+	border-radius: 0.25rem;
+	direction: ltr;
+  }
+  
+  .datepicker-inline {
+	width: 220px;
+  }
+  
+  .datepicker-rtl {
+	direction: rtl;
+  }
+  
+  .datepicker-rtl.dropdown-menu {
+	left: auto;
+  }
+  
+  .datepicker-rtl table tr td span {
+	float: right;
+  }
+  
+  .datepicker-dropdown {
+	top: 0;
+	left: 0;
+	padding: 4px;
+  }
+  
+  .datepicker-dropdown:before {
+	content: '';
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid rgba(0, 0, 0, 0.15);
+	border-top: 0;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+  }
+  
+  .datepicker-dropdown:after {
+	content: '';
+	display: inline-block;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #fff;
+	border-top: 0;
+	position: absolute;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-left:before {
+	left: 6px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-left:after {
+	left: 7px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-right:before {
+	right: 6px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-right:after {
+	right: 7px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-bottom:before {
+	top: -7px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-bottom:after {
+	top: -6px;
+  }
+  
+  .datepicker-dropdown.datepicker-orient-top:before {
+	bottom: -7px;
+	border-bottom: 0;
+	border-top: 7px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .datepicker-dropdown.datepicker-orient-top:after {
+	bottom: -6px;
+	border-bottom: 0;
+	border-top: 6px solid #fff;
+  }
+  
+  .datepicker table {
+	margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  .datepicker table tr td,
+  .datepicker table tr th {
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	border: none;
+  }
+  
+  .table-striped .datepicker table tr td,
+  .table-striped .datepicker table tr th {
+	background-color: transparent;
+  }
+  
+  .datepicker table tr td.old,
+  .datepicker table tr td.new {
+	color: #6c757d;
+  }
+  
+  .datepicker table tr td.day:hover,
+  .datepicker table tr td.focused {
+	background: #f8f9fa;
+	cursor: pointer;
+  }
+  
+  .datepicker table tr td.disabled,
+  .datepicker table tr td.disabled:hover {
+	background: none;
+	color: #6c757d;
+	cursor: default;
+  }
+  
+  .datepicker table tr td.highlighted {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+	border-radius: 0;
+  }
+  
+  .datepicker table tr td.highlighted:hover {
+	color: #fff;
+	background-color: #138496;
+	border-color: #117a8b;
+  }
+  
+  .datepicker table tr td.highlighted:focus,
+  .datepicker table tr td.highlighted.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+  
+  .datepicker table tr td.highlighted.disabled,
+  .datepicker table tr td.highlighted:disabled {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+  }
+  
+  .datepicker table tr td.highlighted:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.highlighted:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.highlighted.dropdown-toggle {
+	color: #fff;
+	background-color: #117a8b;
+	border-color: #10707f;
+  }
+  
+  .datepicker table tr td.highlighted:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.highlighted:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.highlighted.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+  
+  .datepicker table tr td.highlighted.focused {
+	background: #117a8b;
+  }
+  
+  .datepicker table tr td.highlighted.disabled,
+  .datepicker table tr td.highlighted.disabled:active {
+	opacity: 0.65;
+  }
+  
+  .datepicker table tr td.today {
+	color: #212529;
+	background-color: #fd7e14;
+	border-color: #fd7e14;
+  }
+  
+  .datepicker table tr td.today:hover {
+	color: #fff;
+	background-color: #e96b02;
+	border-color: #dc6502;
+  }
+  
+  .datepicker table tr td.today:focus,
+  .datepicker table tr td.today.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+  }
+  
+  .datepicker table tr td.today.disabled,
+  .datepicker table tr td.today:disabled {
+	color: #212529;
+	background-color: #fd7e14;
+	border-color: #fd7e14;
+  }
+  
+  .datepicker table tr td.today:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.today:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.today.dropdown-toggle {
+	color: #fff;
+	background-color: #dc6502;
+	border-color: #cf5f02;
+  }
+  
+  .datepicker table tr td.today:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.today:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.today.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+  }
+  
+  .datepicker table tr td.today.focused {
+	background: #feb679;
+  }
+  
+  .datepicker table tr td.today.disabled,
+  .datepicker table tr td.today.disabled:active {
+	background: #773701;
+	color: #6c757d;
+  }
+  
+  .datepicker table tr td.range {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+	border-radius: 0;
+  }
+  
+  .datepicker table tr td.range:hover {
+	color: #212529;
+	background-color: #e2e6ea;
+	border-color: #dae0e5;
+  }
+  
+  .datepicker table tr td.range:focus,
+  .datepicker table tr td.range.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  }
+  
+  .datepicker table tr td.range.disabled,
+  .datepicker table tr td.range:disabled {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+  }
+  
+  .datepicker table tr td.range:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.range:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.range.dropdown-toggle {
+	color: #212529;
+	background-color: #dae0e5;
+	border-color: #d3d9df;
+  }
+  
+  .datepicker table tr td.range:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.range:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.range.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+  }
+  
+  .datepicker table tr td.range.focused {
+	background: #dae0e5;
+  }
+  
+  .datepicker table tr td.range.disabled,
+  .datepicker table tr td.range.disabled:active {
+	opacity: 0.65;
+  }
+  
+  .datepicker table tr td.range.highlighted {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+	border-radius: 0;
+  }
+  
+  .datepicker table tr td.range.highlighted:hover {
+	color: #fff;
+	background-color: #138496;
+	border-color: #117a8b;
+  }
+  
+  .datepicker table tr td.range.highlighted:focus,
+  .datepicker table tr td.range.highlighted.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+  
+  .datepicker table tr td.range.highlighted.disabled,
+  .datepicker table tr td.range.highlighted:disabled {
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+  }
+  
+  .datepicker table tr td.range.highlighted:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.range.highlighted:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.range.highlighted.dropdown-toggle {
+	color: #fff;
+	background-color: #117a8b;
+	border-color: #10707f;
+  }
+  
+  .datepicker table tr td.range.highlighted:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.range.highlighted:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.range.highlighted.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  }
+  
+  .datepicker table tr td.range.highlighted.disabled,
+  .datepicker table tr td.range.highlighted.disabled:active {
+	opacity: 0.65;
+  }
+  
+  .datepicker table tr td.range.today {
+	color: #212529;
+	background-color: #fd7e14;
+	border-color: #fd7e14;
+  }
+  
+  .datepicker table tr td.range.today:hover {
+	color: #fff;
+	background-color: #e96b02;
+	border-color: #dc6502;
+  }
+  
+  .datepicker table tr td.range.today:focus,
+  .datepicker table tr td.range.today.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+  }
+  
+  .datepicker table tr td.range.today.disabled,
+  .datepicker table tr td.range.today:disabled {
+	color: #212529;
+	background-color: #fd7e14;
+	border-color: #fd7e14;
+  }
+  
+  .datepicker table tr td.range.today:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.range.today:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.range.today.dropdown-toggle {
+	color: #fff;
+	background-color: #dc6502;
+	border-color: #cf5f02;
+  }
+  
+  .datepicker table tr td.range.today:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.range.today:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.range.today.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(253, 126, 20, 0.5);
+  }
+  
+  .datepicker table tr td.range.today.disabled,
+  .datepicker table tr td.range.today.disabled:active {
+	background: #773701;
+	color: #6c757d;
+  }
+  
+  .datepicker table tr td.selected,
+  .datepicker table tr td.selected.highlighted {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+  }
+  
+  .datepicker table tr td.selected:hover,
+  .datepicker table tr td.selected.highlighted:hover {
+	color: #fff;
+	background-color: #5a6268;
+	border-color: #545b62;
+  }
+  
+  .datepicker table tr td.selected:focus,
+  .datepicker table tr td.selected.focus,
+  .datepicker table tr td.selected.highlighted:focus,
+  .datepicker table tr td.selected.highlighted.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  }
+  
+  .datepicker table tr td.selected.disabled,
+  .datepicker table tr td.selected:disabled,
+  .datepicker table tr td.selected.highlighted.disabled,
+  .datepicker table tr td.selected.highlighted:disabled {
+	color: #fff;
+	background-color: #6c757d;
+	border-color: #6c757d;
+  }
+  
+  .datepicker table tr td.selected:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.selected:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.selected.dropdown-toggle,
+  .datepicker table tr td.selected.highlighted:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.selected.highlighted:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.selected.highlighted.dropdown-toggle {
+	color: #fff;
+	background-color: #545b62;
+	border-color: #4e555b;
+  }
+  
+  .datepicker table tr td.selected:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.selected:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.selected.dropdown-toggle:focus,
+  .datepicker table tr td.selected.highlighted:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.selected.highlighted:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.selected.highlighted.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  }
+  
+  .datepicker table tr td.active,
+  .datepicker table tr td.active.highlighted {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+  }
+  
+  .datepicker table tr td.active:hover,
+  .datepicker table tr td.active.highlighted:hover {
+	color: #fff;
+	background-color: #0069d9;
+	border-color: #0062cc;
+  }
+  
+  .datepicker table tr td.active:focus,
+  .datepicker table tr td.active.focus,
+  .datepicker table tr td.active.highlighted:focus,
+  .datepicker table tr td.active.highlighted.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .datepicker table tr td.active.disabled,
+  .datepicker table tr td.active:disabled,
+  .datepicker table tr td.active.highlighted.disabled,
+  .datepicker table tr td.active.highlighted:disabled {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+  }
+  
+  .datepicker table tr td.active:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.active:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.active.dropdown-toggle,
+  .datepicker table tr td.active.highlighted:not(:disabled):not(.disabled):active,
+  .datepicker table tr td.active.highlighted:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td.active.highlighted.dropdown-toggle {
+	color: #fff;
+	background-color: #0062cc;
+	border-color: #005cbf;
+  }
+  
+  .datepicker table tr td.active:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.active:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.active.dropdown-toggle:focus,
+  .datepicker table tr td.active.highlighted:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td.active.highlighted:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td.active.highlighted.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .datepicker table tr td span {
+	display: block;
+	width: 23%;
+	height: 54px;
+	line-height: 54px;
+	float: left;
+	margin: 1%;
+	cursor: pointer;
+	border-radius: 4px;
+  }
+  
+  .datepicker table tr td span:hover,
+  .datepicker table tr td span.focused {
+	background: #f8f9fa;
+  }
+  
+  .datepicker table tr td span.disabled,
+  .datepicker table tr td span.disabled:hover {
+	background: none;
+	color: #6c757d;
+	cursor: default;
+  }
+  
+  .datepicker table tr td span.active,
+  .datepicker table tr td span.active:hover,
+  .datepicker table tr td span.active.disabled,
+  .datepicker table tr td span.active.disabled:hover {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+  }
+  
+  .datepicker table tr td span.active:hover,
+  .datepicker table tr td span.active:hover:hover,
+  .datepicker table tr td span.active.disabled:hover,
+  .datepicker table tr td span.active.disabled:hover:hover {
+	color: #fff;
+	background-color: #0069d9;
+	border-color: #0062cc;
+  }
+  
+  .datepicker table tr td span.active:focus,
+  .datepicker table tr td span.active.focus,
+  .datepicker table tr td span.active:hover:focus,
+  .datepicker table tr td span.active:hover.focus,
+  .datepicker table tr td span.active.disabled:focus,
+  .datepicker table tr td span.active.disabled.focus,
+  .datepicker table tr td span.active.disabled:hover:focus,
+  .datepicker table tr td span.active.disabled:hover.focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .datepicker table tr td span.active.disabled,
+  .datepicker table tr td span.active:disabled,
+  .datepicker table tr td span.active:hover.disabled,
+  .datepicker table tr td span.active:hover:disabled,
+  .datepicker table tr td span.active.disabled.disabled,
+  .datepicker table tr td span.active.disabled:disabled,
+  .datepicker table tr td span.active.disabled:hover.disabled,
+  .datepicker table tr td span.active.disabled:hover:disabled {
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+  }
+  
+  .datepicker table tr td span.active:not(:disabled):not(.disabled):active,
+  .datepicker table tr td span.active:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td span.active.dropdown-toggle,
+  .datepicker table tr td span.active:hover:not(:disabled):not(.disabled):active,
+  .datepicker table tr td span.active:hover:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td span.active:hover.dropdown-toggle,
+  .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled):active,
+  .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td span.active.disabled.dropdown-toggle,
+  .datepicker table tr td span.active.disabled:hover:not(:disabled):not(.disabled):active,
+  .datepicker table tr td span.active.disabled:hover:not(:disabled):not(.disabled).active,
+  .show > .datepicker table tr td span.active.disabled:hover.dropdown-toggle {
+	color: #fff;
+	background-color: #0062cc;
+	border-color: #005cbf;
+  }
+  
+  .datepicker table tr td span.active:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td span.active:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td span.active.dropdown-toggle:focus,
+  .datepicker table tr td span.active:hover:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td span.active:hover:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td span.active:hover.dropdown-toggle:focus,
+  .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td span.active.disabled:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td span.active.disabled.dropdown-toggle:focus,
+  .datepicker table tr td span.active.disabled:hover:not(:disabled):not(.disabled):active:focus,
+  .datepicker table tr td span.active.disabled:hover:not(:disabled):not(.disabled).active:focus,
+  .show > .datepicker table tr td span.active.disabled:hover.dropdown-toggle:focus {
+	-webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+			box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+  }
+  
+  .datepicker table tr td span.old,
+  .datepicker table tr td span.new {
+	color: #6c757d;
+  }
+  
+  .datepicker .datepicker-switch {
+	width: 145px;
+  }
+  
+  .datepicker .datepicker-switch,
+  .datepicker .prev,
+  .datepicker .next,
+  .datepicker tfoot tr th {
+	cursor: pointer;
+  }
+  
+  .datepicker .datepicker-switch:hover,
+  .datepicker .prev:hover,
+  .datepicker .next:hover,
+  .datepicker tfoot tr th:hover {
+	background: #f8f9fa;
+  }
+  
+  .datepicker .prev.disabled,
+  .datepicker .next.disabled {
+	visibility: hidden;
+  }
+  
+  .datepicker .cw {
+	font-size: 10px;
+	width: 12px;
+	padding: 0 2px 0 5px;
+	vertical-align: middle;
+  }
+  
+  .input-group.date .input-group-addon {
+	cursor: pointer;
+  }
+  
+  .input-daterange {
+	width: 100%;
+  }
+  
+  .input-daterange input {
+	text-align: center;
+  }
+  
+  .input-daterange input:first-child {
+	border-radius: 3px 0 0 3px;
+  }
+  
+  .input-daterange input:last-child {
+	border-radius: 0 3px 3px 0;
+  }
+  
+  .input-daterange .input-group-addon {
+	width: auto;
+	min-width: 16px;
+	padding: 4px 5px;
+	line-height: 1.5;
+	border-width: 1px 0;
+	margin-left: -5px;
+	margin-right: -5px;
+  }
+  
+  
